@@ -8,13 +8,13 @@ export default function Breadcrumbs({ items }) {
       <ul className="flex gap-2">
         {items.map((item, index) => (
           <li key={index} className="flex items-center">
-            {index > 0 && <span className="mx-2 text-gray-500">&gt;</span>}
+            {index > 0 && <span className="mx-2">&gt;</span>}
             {item.href ? (
-              <Link href={item.href} className="text-gray-500 hover:text-gray-700">
+              <Link href={item.href} >
                 {item.label}
               </Link>
             ) : (
-              <span className="text-gray-700">{item.label}</span>
+              <span >{item.label}</span>
             )}
           </li>
         ))}
